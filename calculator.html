@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		var fvalue,svalue,tvalue,sign=0
+
+		function cal(n)
+		{
+			document.getElementById('ans').value += n;	
+
+		}
+		function math(x)
+		{
+			fvalue = document.getElementById('ans').value
+			sign=x;
+			document.getElementById('ans').value = "";
+			// document.getElementById('ans').value += x; 
+			
+		}
+		function equal()
+		{
+			svalue = document.getElementById('ans').value
+			if(sign== '+')
+			{
+				var c = parseInt(fvalue) + parseInt(svalue)
+				document.getElementById('ans').value = c
+			}
+
+			if(sign== '-')
+			{
+				var c = parseInt(fvalue) - parseInt(svalue)
+				document.getElementById('ans').value = c
+			}
+
+			if(sign== '*')
+			{
+				var c = parseInt(fvalue) * parseInt(svalue)
+				document.getElementById('ans').value = c
+			}
+
+			if(sign== '/')
+			{
+				var c = parseInt(fvalue) / parseInt(svalue)
+				document.getElementById('ans').value = c
+			}
+
+			if(sign== '%')
+			{
+				var c = parseInt(fvalue) * parseInt(svalue)/100;
+				document.getElementById('ans').value = c
+			}
+			
+		}
+		// function AC(fvalue,svalue)
+		// {
+		// 	fvalue="0";
+		// 	svalue="0";
+		// 	document.getElementById('ans').value = "";
+		// }
+
+
+		
+
+	</script>
+	<style type="text/css">
+			
+			.btn{
+				height: 30px;
+				width: 50px;
+				background-color: blue;
+				color: white;
+				font-size: larger;
+
+			}
+			.btn:hover{
+				background-color: lightblue;
+				color: black;
+
+			}
+			.main{
+				text-align: center;
+
+			}
+			
+			.btn1{
+				height: 20px;
+				width: 205px;
+				border-radius: 5px;
+				border: medium solid black;
+
+			}
+		/*	.btn2{
+				width: 200px;
+				background-color: blue;
+				border-radius: 5px;
+				color: white;
+
+			}
+*/		/*	.btn2:hover{
+				background-color: lightblue;
+				color: black;
+			}*/
+
+
+	</style>
+
+</head>
+<body>
+	<div class="main">
+		<input type="text" class="btn1" id="ans" placeholder="0" name=""><br><br>
+		<input type="button" class="btn" value="1" onclick="cal('1')" name="">
+		<input type="button" class="btn" value="2" onclick="cal('2')" name="">
+		<input type="button" class="btn" value="3" onclick="cal('3')" name="">
+		<input type="button" class="btn" value="+" onclick="math('+')" name=""><br><br>
+		<input type="button" class="btn" value="4" onclick="cal('4')" name="">
+		<input type="button" class="btn" value="5" onclick="cal('5')" name="">
+		<input type="button" class="btn" value="6" onclick="cal('6')" name="">
+		<input type="button" class="btn" value="-" onclick="math('-')" name=""><br><br>
+		<input type="button" class="btn" value="7" onclick="cal('7')" name="">
+		<input type="button" class="btn" value="8" onclick="cal('8')" name="">
+		<input type="button" class="btn" value="9" onclick="cal('9')" name="">
+		<input type="button" class="btn" value="*" onclick="math('*')" name=""><br><br>
+		<input type="button" class="btn" value="0" onclick="cal('0')" name="">
+		<input type="button" class="btn" value="00" onclick="cal('00')" name="">
+		<input type="button" class="btn" value="." onclick="cal('.')" name="">
+		<input type="button" class="btn" value="/" onclick="math('/')" name=""><br><br>
+		<input type="button" class="btn" value="%" onclick="math('%')" name="">
+		<input type="button" class="btn" value="C" onclick="math('C')" name="">
+		<input type="button" class="btn" value="AC" onclick="math('AC')" name=""> 
+		<input type="button" class="btn" value="=" onclick="equal('=')" name=""><br>
+		
+	</div>
+
+</body>
+</html>

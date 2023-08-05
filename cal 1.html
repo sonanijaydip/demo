@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		// function sum()
+		// {
+		// 	var no1 = document.getElementById('no1').value
+		// 	var no2 = document.getElementById('no2').value
+
+		// 	var a= parseInt(no1) + parseInt(no2);
+		// 	document.getElementById('ans').value=a;
+			
+		// }
+		// 	function substract()
+		// {
+		// 	var no1 = document.getElementById('no1').value
+		// 	var no2 = document.getElementById('no2').value
+
+		// 	var a= parseInt(no1) - parseInt(no2);
+		// 	document.getElementById('ans').value=a;
+			
+		// }
+		// 	function multiplication()
+		// {
+		// 	var no1 = document.getElementById('no1').value
+		// 	var no2 = document.getElementById('no2').value
+
+		// 	var a= parseInt(no1) * parseInt(no2);
+		// 	document.getElementById('ans').value=a;
+			
+		// }
+		// 	function division()
+		// {
+		// 	var no1 = document.getElementById('no1').value
+		// 	var no2 = document.getElementById('no2').value
+
+		// 	var a= parseInt(no1) / parseInt(no2);
+		// 	document.getElementById('ans').value=a;
+			
+		// }
+
+		function calculate(s)
+		{
+			var no1 = document.getElementById('no1').value
+			var no2 = document.getElementById('no2').value
+
+			var a= parseInt(no1) + parseInt(no2);
+			var b= parseInt(no1) - parseInt(no2);
+			var c= parseInt(no1) * parseInt(no2);
+			var d= parseInt(no1) / parseInt(no2);
+
+			sign=s;
+
+			if(sign=='+')
+			{
+				document.getElementById('ans').value=a;
+			}
+			if(sign=='-')
+			{
+				document.getElementById('ans').value=b;
+			}
+			if(sign=='*')
+			{
+				document.getElementById('ans').value=c;
+			}
+			if(sign=='/')
+			{
+				document.getElementById('ans').value=d
+			}
+
+
+
+		}
+
+	</script>
+
+
+</head>
+<body>
+	<!-- <input type="text" id="no1" name="">
+	<input type="text" id="no2" name=""><br>
+
+	<input type="button" value="+" onclick="sum()" name="">
+	<input type="button" value="-" onclick="substract()" name="">
+	<input type="button" value="*" onclick="multiplication()" name="">
+	<input type="button" value="/" onclick="division()" name=""><br>
+
+	<input type="text" readonly id="ans" name=""> -->
+
+	<input type="text" id="no1" name="" placeholder="enter no1">
+	<input type="text" id="no2" name="" placeholder="enter no2"><br>
+
+	<input type="button" value="+" id="sum" onclick="calculate('+')" name="">
+	<input type="button" value="-" id="sub" onclick="calculate('-')" name="">
+	<input type="button" value="*" id="mul" onclick="calculate('*')" name="">
+	<input type="button" value="/" id="div" onclick="calculate('/')" name=""><br>
+
+	<input type="text" readonly id="ans" name="" placeholder="answer">
+
+
+</body>
+</html>
